@@ -89,25 +89,49 @@
 
 /////////////////////////////////////////////////////////////////////////
 
-import React from 'react'
-import {createBrowserRouter ,RouterProvider} from 'react-router-dom'
-import HomePage3 from './useParams/HomePage3'
-import Items from './useParams/Items'
 
 
+// import React from 'react'
+// import {createBrowserRouter ,RouterProvider} from 'react-router-dom'
+// import HomePage3 from './useParams/HomePage3'
+// import Items from './useParams/Items'
 
-const x = createBrowserRouter([
-  {path: "" , element : <HomePage3 />},
-  {path : '/items/:id' , element : <Items />},
+
+// const x = createBrowserRouter([
+//   {path: "" , element : <HomePage3 />},
+//   {path : '/items/:id' , element : <Items />},
   
+// ])
+// const App = () => {
+//   return (
+//     <div>
+//       <RouterProvider router={x}/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+import React from 'react'
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+
+const router = createBrowserRouter([
+  {path:'/' , element:<Home/>},
+  {path : 'about' , element : <About/>}
 ])
+
 const App = () => {
   return (
     <div>
-      <RouterProvider router={x}/>
+      <RouterProvider router={router}/>
     </div>
   )
 }
 
 export default App
-
